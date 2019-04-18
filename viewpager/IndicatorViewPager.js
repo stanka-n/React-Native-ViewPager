@@ -58,6 +58,7 @@ export default class IndicatorViewPager extends Component {
     render () {
         return (
             <View style={[styles.container, this.props.style]} >
+                {this._renderIndicator()}
                 <ViewPager
                     {...this.props}
                     horizontalScroll={this.props.horizontalScroll}
@@ -66,7 +67,6 @@ export default class IndicatorViewPager extends Component {
                     onPageScroll={this._onPageScroll}
                     onPageSelected={this._onPageSelected}
                 />
-                {this._renderIndicator()}
             </View>
         )
     }
